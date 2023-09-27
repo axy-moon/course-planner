@@ -2,11 +2,18 @@ import logo from './logo.svg';
 import './App.css';
 import SubjectForm from './SubjectForm';
 import Home from './Home';
-
+import psg from "./psg.png"
 function App () {
     return (
       <div className="App">
-        <h1>Course Planner</h1>
+        <div style={{display:"flex",justifyContent:"center"}}>
+          <img src={psg} alt='psg' style={{width:54,padding:12}}/>
+          <div>
+            <h1 style={{margin:0}}>PSG COLLEGE OF TECHNOLOGY</h1>
+            <h2 style={{margin:0}}>Department of Computer Application</h2>
+          </div>
+        </div>
+        <h3>Course Planner</h3>
         <Home/>
         {/* <SubjectForm/>         */}
       </div>

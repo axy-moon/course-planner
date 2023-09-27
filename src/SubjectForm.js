@@ -143,7 +143,7 @@ export default function SubjectForm() {
             
 
             <Grid item sm={12}>
-            <Grid container xs={12} sm={12} spacing={8}>
+            <Grid container xs={12} spacing={8}>
               <Grid item>
                 <Button variant="contained" sx={{ color: "#fff",width:"100%",margin:"auto" }}>
                   Discard
