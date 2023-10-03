@@ -10,7 +10,8 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import Button from "@mui/material/Button";
 import SubjectForm from './SubjectForm';
-
+import { ref, set } from 'firebase/database';
+import { db } from './firebase';
 
 
 
@@ -34,10 +35,23 @@ export default function Home() {
     "2nd Year"
   ];
   const semesters = [1,2,3,4];
-  const handleSubmit = () => {
-    console.log(year)
-    console.log(academic)
-    console.log(semester)
+  const handleSubmit = async () => {
+
+    const dbRef = ref(db,'/course')
+    set(dbRef,{
+      academic : {
+        year : {
+        "semester" : semester
+        }
+    }})
+      .then(()=>{
+        console.log("successfully inserted")
+      }
+      )
+      .catch((error)=>{
+        console.log(error)
+      })
+
     setSubmit(!submit)
     
   }
