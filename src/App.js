@@ -1,6 +1,7 @@
 import './App.css';
 import Home from './Home';
 import psg from "./psg.png"
+import Menu from './Menu';
 function App () {
     return (
       <div className="App">
@@ -12,7 +13,9 @@ function App () {
           </div>
         </div>
         <h3>Course Planner</h3>
-        <Home/>
+        <Menu/>
+        
+        {/* <Home/> */}
         {/* <SubjectForm/>         */}
       </div>
              );
